@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">TeamWise Project Page</h1>
+            <h1 class="title is-1 publication-title">TeamWise: the AI facilitator</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -101,7 +101,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Slogan
+        From scattered ideas to shared success—meetings made easy.
       </h2>
     </div>
   </div>
@@ -109,22 +109,58 @@
 <!-- End Demo video -->
 
 <!-- Project abstract -->
+<!-- Project abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
+
+          <!-- Challenge Overview -->
+          <h3 class="title is-4">What problem are we addressing?</h3>
           <p>
-            Challenge Overview: Setting the scene: 
-            What problem are you addressing with the ECH theme, and why is it important?
-            What is the existing solution space? What is the gap?
+            Have you ever struggled while collaborating on a group project—struggling to define clear goals, keep everyone on track, and capture all your ideas? That challenge becomes even bigger when you’re working online, and it escalates further if your teammates are on different campuses or even in different countries.
           </p>
+          <p>
+            Collaborative group work (CGW) in online environments has become a cornerstone of modern higher education, yet it often falls short: meetings lack clear objectives, conversations drift off-topic, and participants lose focus. In a study by Robinson et al. (2013), 85% of students described online group work as “difficult,” “challenging,” or “frustrating,” citing poor communication, decision-making delays, and uneven participation.
+          </p>
+          <p>
+            At ETH, this problem is magnified for student teams split between Zurich and our new Heilbronn campus, where physical distance makes it harder to build rapport, stay engaged, and coordinate effectively.
+          </p>
+
+          <!-- Existing Solution Space -->
+          <h3 class="title is-4">What is the existing solution space?</h3>
+          <p>Current tools include:</p>
+          <ul>
+            <li>Video conferencing platforms (Zoom, Teams) with basic breakout rooms and chat</li>
+            <li>LMS extensions (Moodle group modules, Canvas discussions) for asynchronous collaboration</li>
+            <li>Passive AI services (Otter.ai transcription, polling features) that capture notes but don’t guide discussion</li>
+            <li>Experimental setups (telepresence robots, Holographic Video Conferencing) which are costly and complex</li>
+          </ul>
+          <p>
+            Researchers and educators have shown that clear guidelines, structured communication, and active engagement boost online meeting quality (Bakir et al., 2020; Chang & Kang, 2016; Edvardsen Tonheim et al., 2024).
+          </p>
+
+          <!-- Gap -->
+          <h3 class="title is-4">What is the gap?</h3>
+          <p>None of these solutions provide real-time, voice-driven facilitation that:</p>
+          <ul>
+            <li>Enforces a meeting agenda (e.g., Double Diamond or design thinking)</li>
+            <li>Prompts targeted questions to keep momentum</li>
+            <li>Balances participation and manages time</li>
+            <li>Summarizes decisions and posts a clear to-do list</li>
+          </ul>
+          <p>
+            To bridge this gap, we propose <strong>TeamWise</strong>, an AI facilitator that joins hybrid meetings as a human-like moderator, actively guiding teams through each phase, ensuring focus, engagement, and clear outcomes across multi-campus collaborations.
+          </p>
+
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- End project abstract -->
 
 <!-- Design -->
@@ -134,11 +170,18 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Design</h2>
         <div class="content has-text-justified">
+          <h3 class="title is-4">What is the concept?</h3>
           <p>
-            <!--TODO: What is the concept? Who are the users? What does it enable them to do?-->
-            A group of students are located remotely and are working on a project together. 
-            Research found that in group work the following challenges arise; uneven participation, misaligned goals and time constraints.
-            Our solution enables the students to tackle these challenges. 
+            <!--What is the concept? Who are the users? What does it enable them to do?-->
+            TeamWise is an AI-powered meeting facilitator that joins online sessions and acts like a human moderator. It can work silently in the background or speak up to guide discussions, using frameworks like the Double Diamond to keep meetings structured and goal-oriented.
+          </p>
+          <h3 class="title is-4">Who are the users?</h3>
+          <p>
+            Our primary users are students at ETH Heidelberg and ETH Zurich working on group projects across campuses. Secondary users include any teams—academic or professional—holding virtual or hybrid meetings.
+          </p>
+          <h3 class="title is-4">What does it enable them to do?</h3>
+          <p>
+            TeamWise helps users define and maintain clear meeting goals, balance participation, capture key ideas in real time, and automatically generate concise to-do lists. It keeps discussions focused, on schedule, and aligned on next steps, whether for student projects or general team meetings.
           </p>
         </div>
       </div>
@@ -180,32 +223,61 @@
 <!-- End technical details -->
 
 <!-- Design Process -->
+
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Design Process</h2>
+        <h2 class="title is-3">Design Evolution</h2>
         <div class="content has-text-justified">
+
+          <h3 class="title is-4">Initial Directions & Inspiration</h3>
           <p>
-            ○ What were your initial directions? What informs your design?
-            ○ How did your design evolve through prototyping and feedback? Show key pivots or lessons learned.
+            We started by mapping out the key pain points of hybrid, multi-campus group work: unclear goals, uneven participation, and meeting drift.  
+            Our design was informed by literature on online collaboration (Bakir et al., 2020; Chang & Kang, 2016) and interviews with students and educators.  
+            We chose the Double Diamond framework to give meetings a clear, four-phase structure and sketched both passive and active facilitator concepts.
           </p>
+
+          <h3 class="title is-4">TODO here just filler: Evolution Through Prototyping & Feedback</h3>
+          <p>
+            <strong>First prototype:</strong> a sidebar bot that silently logged timestamps and notes. Users liked the structure but missed real-time guidance.  
+          </p>
+          <p>
+            <strong>Key pivot:</strong> we added a vocal “active” mode. Early testers reported higher engagement when the AI spoke prompts and phase changes aloud.  
+          </p>
+          <p>
+            <strong>Lessons learned:</strong>  
+            <ul>
+              <li>Balance voice prompts to avoid interruptions;</li>
+              <li>Provide mute/pause controls for comfort;</li>
+              <li>Allow goal and timekeeping customization before each meeting.</li>
+            </ul>
+          </p>
+
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- End technical details -->
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{angehrn2025teamwise,
+  author       = {Dominique Angehrn and Akhila Obilisetty and Mikkeline Elleby},
+  title        = {{TeamWise}: the AI Meeting Facilitator},
+  year         = {2025},
+  howpublished = {\url{https://github.com/angehrnd/TeamWise}},
+  note         = {Design in Educational Technologies, ETH Zurich \& ETH Heilbronn},
+}</code></pre>
+  </div>
 </section>
 <!--End BibTex citation -->
+
 
 
   <footer class="footer">
