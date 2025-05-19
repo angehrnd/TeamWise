@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">TeamWise Project Page</h1>
+            <h1 class="title is-1 publication-title">TeamWise: the AI meeting facilitator</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -101,7 +101,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Slogan
+        From scattered ideas to shared success—meetings made easy.
       </h2>
     </div>
   </div>
@@ -115,10 +115,42 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
+          <!-- Challenge Overview: Setting the scene: What problem are you addressing with the ECH theme, and why is it important? -->
+          <h3 class="title is-4">What problem are we addressing?</h3>
           <p>
-            Challenge Overview: Setting the scene: 
-            What problem are you addressing with the ECH theme, and why is it important?
-            What is the existing solution space? What is the gap?
+            Have you ever struggled while collaborating on a group project—struggling to define clear goals, keep everyone on track, and capture all your ideas? That challenge becomes even bigger when you’re working online, and it escalates further if your teammates are on different campuses or even in different countries.
+          </p>
+          <p>
+            Collaborative group work (CGW) in online environments has become a cornerstone of modern higher education, yet it often falls short: meetings lack clear objectives, conversations drift off-topic, and participants lose focus. In a study by Robinson et al. (2013), 85% of students described online group work as “difficult,” “challenging,” or “frustrating,” citing poor communication, decision-making delays, and uneven participation.
+          </p>
+          <p>
+            At ETH, this problem is magnified for student teams split between Zurich and our new Heilbronn campus, where physical distance makes it harder to build rapport, stay engaged, and coordinate effectively.
+          </p>
+
+          <!-- Existing Solution Space -->
+          <h3 class="title is-4">What is the existing solution space?</h3>
+          <p>Current tools include:</p>
+          <ul>
+            <li>Video conferencing platforms (Zoom, Teams) with basic breakout rooms and chat</li>
+            <li>LMS extensions (Moodle group modules, Canvas discussions) for asynchronous collaboration</li>
+            <li>Passive AI services (Otter.ai transcription, polling features) that capture notes but don’t guide discussion</li>
+            <li>Experimental setups (telepresence robots, Holographic Video Conferencing) which are costly and complex</li>
+          </ul>
+          <p>
+            Researchers and educators have shown that clear guidelines, structured communication, and active engagement boost online meeting quality (Bakir et al., 2020; Chang & Kang, 2016; Edvardsen Tonheim et al., 2024).
+          </p>
+
+          <!-- Gap -->
+          <h3 class="title is-4">What is the gap?</h3>
+          <p>None of these solutions provide real-time, voice-driven facilitation that:</p>
+          <ul>
+            <li>Enforces a meeting agenda (e.g., Double Diamond or design thinking)</li>
+            <li>Prompts targeted questions to keep momentum</li>
+            <li>Balances participation and manages time</li>
+            <li>Summarizes decisions and posts a clear to-do list</li>
+          </ul>
+          <p>
+            To bridge this gap, we propose <strong>TeamWise</strong>, an AI facilitator that joins hybrid meetings as a human-like moderator, actively guiding teams through each phase, ensuring focus, engagement, and clear outcomes across multi-campus collaborations.
           </p>
         </div>
       </div>
@@ -135,10 +167,52 @@
         <h2 class="title is-3">Design</h2>
         <div class="content has-text-justified">
           <p>
-            <!--TODO: What is the concept? Who are the users? What does it enable them to do?-->
+            <!--What is the concept? Who are the users? What does it enable them to do?-->
             A group of students are located remotely and are working on a project together. 
             Research found that in group work the following challenges arise; uneven participation, misaligned goals and time constraints.
             Our solution enables the students to tackle these challenges. 
+
+            Concept: To address the above gap, we propose an AI-powered meeting facilitator that can integrate into hybrid project meetings for students. 
+            The primary users are student teams in project-based courses spread across multiple campuses (e.g. ETH Zurich and ETH Heilbronn), 
+            though the concept could extend to any distributed team. We envision this AI agent as an active participant in meetings, 
+            structuring and guiding the collaborative process. It provides much-needed meeting structure and direction, 
+            essentially simulating the role of a skilled human facilitator. 
+            By doing so, the system aims to keep the group focused on their goals and help them reach clear outcomes for each session. 
+
+        </p>
+
+        <p>
+          <h3 class="title is-4">Key Capabilities</h3>
+          The AI facilitator offers several core functionalities to support the team’s workflow:
+          <ul>
+            <li>
+              <strong>Framing Goals:</strong> 
+              It begins by clarifying and setting the meeting objectives, ensuring all members start with aligned goals for the session. 
+              This tackles the misalignment issue by explicitly confirming the meeting goals and expected outcome at the outset.
+              </li>
+            <li>
+              <strong>Scaffolding Discussion:</strong> 
+              Throughout the meeting, the AI structures the conversation using prompts and frameworks. 
+              It recognizes discussion topics in real time and asks relevant guiding questions to drive productive dialogue 
+              – for example, prompting deeper exploration of a problem or steering the team back on topic if they stray. 
+              It applies proven scaffolding methods like the Double Diamond model to organize the meeting flow 
+              (e.g., prompting broad brainstorming and helping converge on key points).              
+            </li>
+            <li>
+              <strong>Managing Time and Process:</strong> 
+              The facilitator keeps the group on schedule by allotting time for each agenda item 
+              and gently moving the discussion along when needed. It handles logistical moderation 
+              – issuing reminders of time, summarizing interim results, and ensuring decisions or next steps are recorded before moving on. 
+              This real-time management prevents the meeting from stalling or running overtime.    
+            </li>
+            <li>
+              <strong>Ensuring Participation:</strong> 
+              To combat uneven participation, the AI actively monitors involvement and makes space for every voice. 
+              If certain members haven’t spoken, it may invite their input (“Alex, do you have thoughts on this?”) in a polite manner. 
+              It also balances dominant voices by summarizing and shifting focus to others’ ideas. 
+              By managing turn-taking and inclusion, the facilitator improves engagement equity in the group.
+            </li>
+          </ul>
           </p>
         </div>
       </div>
@@ -156,21 +230,35 @@
         <h2 class="title is-3">Technical Details</h2>
         <div class="content has-text-justified">
           <p>
-            <!--TODO: 
+            <!--
             ○ What's under the hood?
             ○ Are you using any off-the-shelf models, platforms, or APIs?
             ○ Justify your technical choices: why did you choose these tools or approaches?
+            -->
+            The website was built with React and Flask based on a Figma design.
+            The bot was built with the Tavus API which uses Deepgram for speech recognition and
+            OpenAI for the LLM understanding and Cartesia for speech to text, which gives a choice of voice, speed and tone.
+            The bot is personalizable based on the users choice of meeting and method as well as the meeting goal, agenda and comments
+            The bot is able to take notes, summarize the meeting and create a to-do list based on the meeting transcript.
+            This API lets us define a persona which takes the users information about the meeting as a prompt. 
+            Also it creates near to real-time transcription and provides video and audio of the created persona.             
+          </p>
+          <p>
+          <!--
             ○ Looking ahead:
               ■ How might this technology evolve over the next 5 years?
               ■ What emerging trends could enhance or reshape your concept?
               ■ How might these advances open up new design opportunities or change how your system is used?
             -->
-            The website was built with React and Flask based on a Figma design.
-            The bot was built ...
-            
+            Looking ahead, we see a future where AI-driven meeting facilitators become commonplace in hybrid and remote work environments.
+            As AI technology continues to advance, we anticipate that these facilitators will become even more sophisticated,
+            capable of understanding complex discussions, recognizing emotional cues, and adapting their facilitation style to suit the needs of diverse teams.
+            We envision a future where these AI facilitators can seamlessly integrate with various collaboration tools,
+            providing a unified experience that enhances productivity and engagement.
+
             We believe that most of the conferencing tools will have integrated agentic bots 
-            that can make decisions which tools to use, for example creating a google doc or a Figma page, 
-            taking notes, creating summaries and todos in real-time based on the meeting transcript. 
+            that can make decisions which tools to use, for example creating a Google Doc or a Figma page, 
+            taking notes, creating summaries and to-dos in real-time based on the meeting transcript. 
           </p>
         </div>
       </div>
@@ -186,16 +274,92 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Design Process</h2>
         <div class="content has-text-justified">
+          <h3 class="title is-4">Initial Directions & Inspiration</h3>
+          <!-- What were your initial directions? What informs your design? -->
           <p>
-            ○ What were your initial directions? What informs your design?
-            ○ How did your design evolve through prototyping and feedback? Show key pivots or lessons learned.
+            We started by mapping out the key pain points of hybrid, multi-campus group work: unclear goals, uneven participation, and meeting drift.  
+            Our design was informed by literature on online collaboration (Bakir et al., 2020; Chang & Kang, 2016) and interviews with students and educators.  
+            We chose the Double Diamond framework to give meetings a clear, four-phase structure and sketched both passive and active facilitator concepts.
+          </p>
+          <!-- How did your design evolve through prototyping and feedback? Show key pivots or lessons learned. -->
+          <h3 class="title is-4">Evolution Through Prototyping & Feedback</h3>
+          <p>
+            <strong>First prototype:</strong> a sidebar bot that silently logged timestamps and notes. Users liked the structure but missed real-time guidance.  
+          </p>
+          <p>
+            <strong>Key pivot:</strong> we added a vocal “active” mode. Early testers reported higher engagement when the AI spoke prompts and phase changes aloud.  
+          </p>
+          <p>
+            <strong>Lessons learned:</strong>  
+            <ul>
+              <li>Balance voice prompts to avoid interruptions;</li>
+              <li>Provide mute/pause controls for comfort;</li>
+              <li>Allow goal and timekeeping customization before each meeting.</li>
+            </ul>
+          </p>
+
+          <p>            
+            (M1) Project based learning (individual directions) - focus on engagement and collaboration 
+
+            Portal 
+            Holographic teacher 
+            Video (subtitles, live diagrams and flowcharts, live key points, zooming in on students who are speaking, highlighting their voices, etc.)
+            </p>
+          <p>
+            (M2) To support student engagement in hybrid, multi-campus settings, we envision an AI 
+            facilitator that actively guides and drives group project meetings by providing structure, 
+            setting a clear direction, and helping teams reach their meeting goals. It simulates the role of 
+            a human facilitator by recognizing discussion topics in real time, prompting relevant 
+            questions to keep the conversation moving, and organizing the flow using collaboration 
+            methods like the Double Diamond or design thinking. The AI also encourages balanced 
+            participation by making space for all voices, managing group dynamics, and keeping 
+            discussions focused and inclusive. This gives us a design space focused on integrating an 
+            intelligent and conversational facilitator into hybrid learning environments, directly 
+            addressing the motivation and engagement barriers faced by remote student teams.
+          </p> 
+          <p>
+            (M4) 
+            We created an active & passive facilitator paper prototype. 
+            The feedback in class was that the majority of the students favored the active facilitator.
+            So, we chose to implement active facilitator if possible.
+          </p>
+          <p>
+            (M5) We started with active + passive, 
+            then we decided on just passive (but this does not interact and we wanted something that could interact), 
+            so we decided to go with a completely active facilitator. We did not focus on note-taking, 
+            text summarization, as these are traditionally not something a facilitator is expected to do.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Design details -->
+
+<!-- Team -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Team</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Akhila Obilisetty (UI/UX & Human-Centered Design) </strong>
+            Akhila specializes in interface design with Figma, emphasizing user-centered design, visual clarity, and accessibility, informed by HCI and learning sciences research. 
+          </p>
+          <p>
+            <strong>Mikkeline Elleby (Education & Design Process) </strong>
+            Mikkeline brings teaching experience and pedagogical insights, along with a background in computer science, to help implement technical solutions for the project. 
+          </p>
+          <p>
+            <strong>Dominique Angehrn (Technical & AI/ML Lead) </strong>
+            Dominique focuses on system design and has expertise in large language models (LLMs) and AI components, managing the technical aspects of the project. 
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End technical details -->
+<!-- Team details -->
 
 
 <!--BibTex citation -->
