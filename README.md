@@ -4,7 +4,7 @@ This is the project page of your project for the Design in Educational Technolog
 
 Teamwise is an AI facilitator that brings structure, clear direction, and balanced participation to hybrid, multi-campus student meetings; acting like a human moderator, it recognises discussion topics in real time, prompts relevant questions to keep the conversation moving, and organises the flow using collaboration frameworks such as the Double Diamond or broader design thinking, ensuring every voice is heard and teams stay on track toward their goals. Together, these capabilities define a design space devoted to integrating an intelligent and conversational facilitator into hybrid learning environments, directly addressing the motivation and engagement barriers faced by remote student teams. Launching a session is simple: open our web app, enter participant count, duration, meeting type, and objectives, and Teamwise generates a tailored agenda, joins the call, and guides the conversation to concrete next steps, and to capture how well Teamwise resonates with users, we developed a brief post-meeting questionnaire.
 
-Implementation: APIs: Tavus-Llama (LLM), Tavus Advanced (STT), Cartesia (TTS) OpenAI (agenda generation),, Tech stack: React (frontend), Flask (backend)
+Implementation: APIs: Tavus-Llama (LLM), Tavus Advanced (STT), Cartesia (TTS), OpenAI (agenda generation), Tech stack: React (frontend), Flask (backend)
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
