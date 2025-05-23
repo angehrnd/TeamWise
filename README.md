@@ -1,33 +1,10 @@
 # TeamWise Project Page
-This is an academic paper project page template.
 
-## Start using the template
-To start using the template click on `Use this Template`.
+This is the project page of your project for the Design in Educational Technology 2025 Class at ETH Zurich.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+Teamwise is an AI facilitator that brings structure, clear direction, and balanced participation to hybrid, multi-campus student meetings; acting like a human moderator, it recognises discussion topics in real time, prompts relevant questions to keep the conversation moving, and organises the flow using collaboration frameworks such as the Double Diamond or broader design thinking, ensuring every voice is heard and teams stay on track toward their goals. Together, these capabilities define a design space devoted to integrating an intelligent and conversational facilitator into hybrid learning environments, directly addressing the motivation and engagement barriers faced by remote student teams. Launching a session is simple: open our web app, enter participant count, duration, meeting type, and objectives, and Teamwise generates a tailored agenda, joins the call, and guides the conversation to concrete next steps, and to capture how well Teamwise resonates with users, we developed a brief post-meeting questionnaire.
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
-
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
-
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://horwitz.ai](https://horwitz.ai)
+Implementation: APIs: Tavus-Llama (LLM), Tavus Advanced (STT), Cartesia (TTS) OpenAI (agenda generation),, Tech stack: React (frontend), Flask (backend)
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
