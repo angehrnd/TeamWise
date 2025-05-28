@@ -55,13 +55,15 @@
             <h1 class="title is-1 publication-title">TeamWise: the AI meeting facilitator</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Dominique Angehrn</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Akhila Obilisetty</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Mikkeline Elleby</a><sup>*</sup>,</span>
-                  </span>
+                  Dominique Angehrn<sup>*</sup>,
+                </span>
+                <span class="author-block">
+                  Akhila Obilisetty<sup>*</sup>,
+                </span>
+                <span class="author-block">
+                  Mikkeline Elleby<sup>*</sup>,
+                </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -121,11 +123,14 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Challenge Overview</h2>
         <div class="content has-text-justified">
           <!-- Challenge Overview: Setting the scene: What problem are you addressing with the ECH theme, and why is it important? -->
-          <h3 class="title is-4">What problem are we addressing?</h3>
+          <h3 class="title is-4">Problem Definition</h3>
           <p>
+            Collaborative learning is known to improve student outcomes, such as higher achievement and engagement, when students work together toward a common goal [1] [2] [3]. However, in the ETH–ECH multi-campus context, supporting effective collaborative group work (CGW) is challenging. “Hybrid” classes, where some students are on one campus and others are on another, impose high cognitive and technical demands during group work [4].
+          </p>
+          <!-- <p>
             Have you ever struggled while collaborating on a group project—struggling to define clear goals, keep everyone on track, and capture all your ideas? That challenge becomes even bigger when you’re working online, and it escalates further if your teammates are on different campuses or even in different countries.
           </p>
           <p>
@@ -133,11 +138,11 @@
           </p>
           <p>
             At ETH, this problem is magnified for student teams split between Zurich and our new Heilbronn campus, where physical distance makes it harder to build rapport, stay engaged, and coordinate effectively.
-          </p>
+          </p> -->
 
           <!-- Existing Solution Space -->
-          <h3 class="title is-4">What is the existing solution space?</h3>
-          <p>Current tools include:</p>
+          <h3 class="title is-4">Existing Solution Space & Gap</h3>
+          <!-- <p>Current tools include:</p>
           <ul>
             <li>Video conferencing platforms (Zoom, Teams) with basic breakout rooms and chat</li>
             <li>LMS extensions (Moodle group modules, Canvas discussions) for asynchronous collaboration</li>
@@ -146,11 +151,24 @@
           </ul>
           <p>
             Researchers and educators have shown that clear guidelines, structured communication, and active engagement boost online meeting quality (Bakir et al., 2020; Chang & Kang, 2016; Edvardsen Tonheim et al., 2024).
+          </p> -->
+
+          <p>
+            Under these conditions, well-structured teamwork is essential but difficult to achieve. 
+            Existing tools only partially address this need. Standard platforms, such as video conferencing, chat, and shared whiteboards, provide basic communication but lack explicit pedagogical support. 
+            For example, most Learning Management Systems (LMS) and collaboration systems offer only rudimentary features for group formation or monitoring [5]. 
+            Similarly, general tools like Zoom, Google Docs, and Miro allow for the sharing of ideas but provide no guidance on the group process.
+            <br><br>
+            Prior research in Human-Computer Interaction (HCI) and Computer-Supported Collaborative Learning (CSCL) has explored the use of smart helpers, such as chatbots and learning analytics, to aid group work; however, these often rely on static scripts or off-the-shelf dialogues that do not adapt to context [6] [7] [8]. 
+            Studies also show that students may not know how to collaborate effectively without guidance [9] [10]. 
+            <br><br>
+            In summary, there is a gap in the solution space: we lack tools that both structure collaboration (e.g., through design-thinking methods or collaboration scripts) and intelligently facilitate group processes in real time. TeamWise aims to fill this gap by combining a structured design process with AI assistance for remote student teams.
+
           </p>
 
           <!-- Gap -->
-          <h3 class="title is-4">What is the gap?</h3>
-          <p>None of these solutions provide real-time, voice-driven facilitation that:</p>
+          <!-- <h3 class="title is-4">What is the gap?</h3> -->
+          <!-- <p>None of these solutions provide real-time, voice-driven facilitation that:</p>
           <ul>
             <li>Enforces a meeting agenda (e.g., Double Diamond or design thinking)</li>
             <li>Prompts targeted questions to keep momentum</li>
@@ -159,7 +177,8 @@
           </ul>
           <p>
             To bridge this gap, we propose <strong>TeamWise</strong>, an AI facilitator that joins hybrid meetings as a human-like moderator, actively guiding teams through each phase, ensuring focus, engagement, and clear outcomes across multi-campus collaborations.
-          </p>
+          </p> -->
+
         </div>
       </div>
     </div>
@@ -176,7 +195,7 @@
         <div class="content has-text-justified">
           <p>
             <!--What is the concept? Who are the users? What does it enable them to do?-->
-            A group of students are located remotely and are working on a project together. 
+            <!-- A group of students are located remotely and are working on a project together. 
             Research found that in group work the following challenges arise; uneven participation, misaligned goals and time constraints.
             Our solution enables the students to tackle these challenges. 
 
@@ -185,7 +204,10 @@
             though the concept could extend to any distributed team. We envision this AI agent as an active participant in meetings, 
             structuring and guiding the collaborative process. It provides much-needed meeting structure and direction, 
             essentially simulating the role of a skilled human facilitator. 
-            By doing so, the system aims to keep the group focused on their goals and help them reach clear outcomes for each session. 
+            By doing so, the system aims to keep the group focused on their goals and help them reach clear outcomes for each session.  -->
+            
+            TeamWise is an AI-facilitator platform enabling structured online collaboration for hybrid project teams. Designed for ETH/ECH university students in project-based courses, it generalizes to broader educational and professional contexts. The system uses a large language model (via Tavus.io) as a conversational facilitator and provides scaffolding for group meetings by creating agendas, guiding ideation steps, enforcing turn-taking, and summarizing discussions. 
+
 
         </p>
 
@@ -194,34 +216,60 @@
           The AI facilitator offers several core functionalities to support the team’s workflow:
           <ul>
             <li>
-              <strong>Framing Goals:</strong> 
-              It begins by clarifying and setting the meeting objectives, ensuring all members start with aligned goals for the session. 
-              This tackles the misalignment issue by explicitly confirming the meeting goals and expected outcome at the outset.
+              <strong>Structured Agendas & Workflow:</strong> 
+              TeamWise enables teams to collaboratively plan meeting agendas and follow project frameworks (e.g., design thinking stages) with clear goals and timing. This structured approach ensures each meeting has an explicit focus and helps prevent unproductive drifting [11] [12].
               </li>
             <li>
-              <strong>Scaffolding Discussion:</strong>
-              Throughout the meeting, the AI structures the conversation using prompts and frameworks. 
-              It recognizes discussion topics in real time and asks relevant guiding questions to drive productive dialogue 
-              – for example, prompting deeper exploration of a problem or steering the team back on topic if they stray. 
-              It applies proven scaffolding methods like the Double Diamond model to organize the meeting flow 
-              (e.g., prompting broad brainstorming and helping converge on key points).              
+              <strong>LLM-based Conversational Facilitation:</strong>
+              An AI agent participates in the meeting via video, asking questions, prompting discussion, and enforcing equitable turn-taking. This virtual facilitator keeps conversations on track and ensures that all members are invited to contribute.              
             </li>
             <li>
-              <strong>Managing Time and Process:</strong> 
-              The facilitator keeps the group on schedule by allotting time for each agenda item 
-              and gently moving the discussion along when needed. It handles logistical moderation 
-              – issuing reminders of time, summarizing interim results, and ensuring decisions or next steps are recorded before moving on. 
-              This real-time management prevents the meeting from stalling or running overtime.    
+              <strong>Ideation and Collaboration Tools:</strong> 
+              The platform supports creative tasks (e.g. brainstorming with the Double Diamond framework) by generating prompts and encouraging different viewpoints. It effectively serves as a digital “workshop assistant” that fosters both divergent and convergent thinking in group ideation.    
             </li>
             <li>
-              <strong>Ensuring Participation:</strong> 
-              To combat uneven participation, the AI actively monitors involvement and makes space for every voice. 
-              If certain members haven’t spoken, it may invite their input (“Alex, do you have thoughts on this?”) in a polite manner. 
-              It also balances dominant voices by summarizing and shifting focus to others’ ideas. 
-              By managing turn-taking and inclusion, the facilitator improves engagement equity in the group.
+              <strong>Real-time Summarization:</strong> 
+              TeamWise captures key discussion points and automatically shares a summary at the end of the meeting. These recaps help participants recall decisions, track project progress, and keep absent members informed, thus maintaining a shared understanding of the project status.
+            </li>
+            <li>
+              <strong>Engagement Balancing:</strong> 
+              To address unequal participation (a known challenge in online collaboration), TeamWise monitors contribution levels and nudges quieter participants to share their ideas. By promoting balanced speaking time and input, the system helps improve group satisfaction and collective learning [13].
             </li>
           </ul>
           </p>
+          <p>
+            In summary, TeamWise operationalizes CSCL (Computer-Supported Collaborative Learning) and HCI insights into a practical system that enhances remote teamwork. 
+          </p>
+        <p>
+          <h3 class="title is-4">Live Demo</h3>
+          The key feature demonstrated in the TeamWise prototype was an AI-facilitated live brainstorming session structured by the Double Diamond design framework. In this session, a conversational AI agent guided a small student team through a rapid, two-phase ideation process. The Double Diamond, a widely accepted design model, prescribes sequential divergent and convergent thinking phases – Discover and Define (followed by Develop and Deliver) – to explore problems and refine solutions. By opening with an explanation of the Double Diamond’s stages, the AI established a common process for collaboration. Such scaffolding aligns with TeamWise’s goal of promoting structured collaboration: the framework ensured the group first generated a wide range of ideas (Discover/divergent thinking) and then focused on selecting the most impactful idea (Define/convergent thinking).
+          <br><br>
+          Before the facilitation began, users were assigned a focused brainstorming challenge:
+          <blockquote>
+            <p>“In the next five years, what is the most impactful way AI can enhance learning?”</p>
+          </blockquote>
+          To set up the session, the user completed a brief meeting configuration form on the TeamWise platform, specifying:
+          <ul>
+            <li><strong>Meeting Title:</strong> A descriptive name for the session</li>
+            <li><strong>Duration:</strong> 5 minutes to ensure we are within demo time limits</li>
+            <li><strong>Participants:</strong> 2, as we had two laptops prepared for the demo</li>
+            <li><strong>Meeting Type:</strong> “Brainstorming”</li>
+            <li><strong>Method:</strong> “Double Diamond”</li>
+            <li><strong>Meeting Goal:</strong> A clear statement of the assigned question</li>
+            <li><strong>Comment:</strong> Participant roles and names for personalized facilitation</li>
+          </ul>
+          Optionally, teams could review the auto-generated agenda or attach supporting documents before submitting and joining the live session.
+          <br><br>
+          The system prompt and meeting plan directed the AI to perform specific facilitation tasks at each stage. In summary, the AI facilitator performed the following functions during the session:
+          <ul>
+            <li><strong>Introduce Framework and Goals:</strong> At the outset, the AI verbally explained the Double Diamond process and the session’s goal, aligning participants on the task and methodology.</li>
+            <li><strong>Prompt Idea Generation (Discover):</strong> The agent invited each team member to propose ideas about AI in learning, leveraging time prompts to keep the session moving. It encouraged rapid, creative contributions, consistent with divergent thinking.</li>
+            <li><strong>Cluster and Prioritize (Define):</strong> After gathering ideas, the AI grouped similar ideas and guided the group toward identifying a single most impactful idea. This phase shifted from exploration to analysis, helping the team converge on a clear focus as recommended by the Double Diamond model.</li>
+            <li><strong>Balance Participation:</strong> Throughout both phases, the AI monitored who had spoken and actively invited quieter voices to contribute, ensuring no one dominated the discussion. It reminded participants of the time remaining and refocused the conversation on the task.</li>
+            <li><strong>Summarize and Close:</strong> Finally, the AI delivered a concise spoken summary of the discussion and next steps, reinforcing shared understanding. This verbal reflection helped to make learning explicit and ensured the group left with clear outcomes.</li>
+          </ul>
+          By automating these functions, the AI met the role of a facilitator in a hybrid meeting: managing the agenda, moderating discussion, tracking time, and ensuring inclusivity.
+        </p>
         </div>
       </div>
     </div>
@@ -284,15 +332,22 @@
         <div class="content has-text-justified">
           <h3 class="title is-4">Initial Directions & Inspiration</h3>
           <!-- What were your initial directions? What informs your design? -->
-          <p>
+          <!-- <p>
             We started by mapping out the key pain points of hybrid, multi-campus group work: unclear goals, uneven participation, and meeting drift.  
             Our design was informed by literature on online collaboration (Bakir et al., 2020; Chang & Kang, 2016) and interviews with students and educators.  
             We chose the Double Diamond framework to give meetings a clear, four-phase structure and sketched both passive and active facilitator concepts.
+          </p> -->
+          <p>
+            The TeamWise design process began by framing the well-documented challenges of hybrid, multi-campus group work. Prior research describes communication breakdowns, misaligned goals, and uneven participation in online teams [14] [15].
+            <br><br>
+            To resolve these pain points, the team focused on AI facilitation during online meetings. The initial design vision was for an “intelligent and conversational facilitator” that would recognize discussion topics in real time, prompt relevant questions, and guide the group using methods like the Double Diamond design framework. In short, the team’s early direction used insights from literature-based evidence of group-work issues and user input, setting a user-centered mandate for structured, active facilitation.
+            <br><br>
+            The concept evolved through iterative prototyping. The team sketched multiple facilitator designs (e.g., passive vs. active agents) and created low-fidelity “paper” prototypes in Balsamiq. These mockups were tested in a peer review session to elicit feedback. The passive prototype implemented a bot that provides an agenda, silently logs notes, and cues in the meeting interface. While peers appreciated the clear agenda and organization, they preferred more visible, real-time guidance. In response, the team selected to pursue the active facilitator: a bot who would speak prompts and guide discussions like a real-life facilitator.
           </p>
           <!-- How did your design evolve through prototyping and feedback? Show key pivots or lessons learned. -->
           <h3 class="title is-4">Evolution Through Prototyping & Feedback</h3>
           <p>
-            <strong>First prototype:</strong> a sidebar bot that silently logged timestamps and notes. Users liked the structure but missed real-time guidance.  
+            <!-- <strong>First prototype:</strong> a sidebar bot that silently logged timestamps and notes. Users liked the structure but missed real-time guidance.  
           </p>
           <p>
             <strong>Key pivot:</strong> we added a vocal “active” mode. Early testers reported higher engagement when the AI spoke prompts and phase changes aloud.  
@@ -303,10 +358,42 @@
               <li>Balance voice prompts to avoid interruptions;</li>
               <li>Provide mute/pause controls for comfort;</li>
               <li>Allow goal and timekeeping customization before each meeting.</li>
+            </ul> -->
+            Technically, the team first attempted to build the conversational agent in-house, but the complexity of the project made it difficult to implement within the project timeline. To meet the MVP scope, the team pragmatically adopted Tavus.io’s LLM-powered video agent. Tavus provided a platform that could render a speaking avatar and handle natural language prompts. This external solution allowed the team to focus on content and flow rather than building all AI components from scratch. The resulting MVP supported a Double Diamond–guided brainstorming as the first meeting mode. In practice, TeamWise would introduce the meeting goal, run participants through the “Discover” and “Define” phases of Double Diamond, then “Develop” solution ideas – exactly as outlined in our design method.
+            <br><br>
+            User feedback underscored the importance of social presence in the virtual facilitator. It was confirmed during the feedback session that a silent helper was less engaging than a speaking agent. Based on this, TeamWise’s final design made the facilitator “present” and visible (e.g., an animated avatar) and prioritized spoken prompts. At the same time, careful balance was needed: overly frequent or verbose interventions became distracting, so the team tuned the script timing and provided mute/pause controls. Another key lesson was the value of customization. In trials, teams wanted to adjust the facilitator’s role before meetings (e.g., specifying goals, time limits, or turning certain phases on/off). As a result, the final design includes pre-meeting settings for agenda details and pacing. These refinements reflect the iterative, user-centered process: each prototype and test cycle revealed new needs that shaped the design. 
+            <br><br>
+            The decision to switch from an internal agent build to Tavus’s solution was driven by practical constraints (time and feasibility) and aligned with the MVP scope. In this way, the team balanced innovation with pragmatism – delivering a working AI meeting facilitator that addresses the original goals of clarity, engagement, and structure in hybrid group work.
+          </p>
+          <p>
+            <h3 class="title is-4">Key Pivots</h3>
+
+            <!-- <strong>Key Pivots:</strong>   -->
+            <ul>
+              <li><strong>Early theme alignment (Hybrid Learning):</strong> From the start, all team members were interested in the course’s Theme 1: Facilitating Hybrid Learning. This focus guided our goal to connect in-person and remote students inclusively. By aligning on this theme early, we framed all subsequent ideas in terms of supporting an equitable hybrid learning environment.</li>
+              <li><strong>Clarifying pedagogical focus (Engagement vs. Collaboration):</strong> The team discussed whether our solution should target student–teacher interaction or student–student interaction, and whether to emphasize engagement (motivation, attention) versus collaboration (peer learning). Resolving this distinction helped us ideate with more granularity. For example, we noted that project-based learning (which emphasizes peer collaboration) tends to “foster deep thinking” through authentic group projects [16]. In other words, prioritizing student-to-student collaboration (rather than just teacher facilitation) better matched our learning objectives for hybrid project-based learning (PBL) settings.</li>
+              <li><strong>Concept exploration and pivot to AI facilitation:</strong> Initially, we explored two routes: a holographic videoconferencing system and an AI “co-pilot” facilitator for lectures. After expert feedback (e.g., discussion with Dr. Nai Li on her successful AI teaching-assistant model), we realized the holographic idea was technically complex, whereas AI facilitation had strong pedagogical promise. This pivot was supported by emerging research: for instance, platforms like Khan Academy are integrating large language models to enable interactive Q&A and exploration, shifting education toward “more engaging, personalized, and adaptive” experiences [17]. Focusing on an AI facilitator aligned with this trend and seemed more feasible in the project timeline.</li>
+              <li><strong>Refocusing on project-based collaboration:</strong> Rather than broadly supporting all aspects of hybrid learning or general project-based learning, the team strategically narrowed its scope to a highly specific and underserved challenge: AI-facilitated online meetings for hybrid teams. This focus emerged from both the literature review and team interest, where students expressed a desire for more structured and equitable experiences during remote collaboration. Instead of attempting to support full-course project management or asynchronous tools, TeamWise concentrates on real-time meeting facilitation—a critical but often neglected part of collaborative work in hybrid education.</li>
             </ul>
+            This decision aligned both with user needs (who prioritized smoother meetings and better group dynamics) and with feasibility constraints, allowing the team to design and test a meaningful MVP. While project-based learning (PBL) remains a relevant context for TeamWise, the emphasis is not on managing the full PBL workflow, but rather on enabling more productive, inclusive synchronous interactions during group work.
+            <br><br>
+            By validating ideas against research, we ensured our facilitator design stayed grounded in evidence and real user needs.
           </p>
 
-          <p>            
+          <p>
+            <h3 class="title is-4">Lessons Learned</h3>
+
+            <!-- <strong>Key Pivots:</strong>   -->
+            <ul>
+              <li><strong>Value of team diversity:</strong> Having a team with different backgrounds and skills was helpful. Each member’s unique perspective made our brainstorming sessions better, leading to more creative ideas. In our work, our different skills (like in AI, human-computer interaction, and teaching) helped us question our assumptions and improve our ideas from various viewpoints.</li>
+              <li><strong>Embracing agile pivots:</strong> Being willing to change our plans early and often, without sticking too much to our first ideas, was very important. Each time we changed direction (like shifting from holograms to AI or from lectures to project-based learning), we discovered new opportunities and focused on what really mattered. Looking back, these adjustments saved us time and made it more likely that we would create something truly valuable.</li>
+              <li><strong>Prioritizing needs-driven design:</strong> A key lesson we learned was to focus on creating something useful and based on research, rather than just going with our original idea. From the beginning, we looked into the real issues with hybrid learning and found evidence for what works best in teaching. This approach focused on understanding the needs of users and regularly checking our assumptions. For example, instead of assuming that a holographic solution was the answer, we assessed it based on its feasibility and learning benefits. We only moved to using AI when we had solid evidence and expertise to support that choice.</li>
+            </ul>
+
+            Our adjustments, based on expert advice, peer feedback, and relevant studies, helped us better meet real learning needs. By focusing on the hybrid learning theme early on, defining our teaching approach, and using feedback and research to guide our decisions, TeamWise followed a user-centered approach to educational technology.            <br><br>
+            <!-- By validating ideas against research, we ensured our facilitator design stayed grounded in evidence and real user needs. -->
+          </p>
+          <!-- <p>            
             (M1) Project based learning (individual directions) - focus on engagement and collaboration 
 
             Portal 
@@ -335,13 +422,64 @@
             (M5) We started with active + passive, 
             then we decided on just passive (but this does not interact and we wanted something that could interact), 
             so we decided to go with a completely active facilitator. We did not focus on note-taking, 
-            text summarization, as these are traditionally not something a facilitator is expected to do.</p>
+            text summarization, as these are traditionally not something a facilitator is expected to do.</p> -->
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- Design details -->
+
+<!-- References -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">References</h2>
+        <div class="content has-text-justified">
+          <p>
+            [1] Johnson, D., Johnson, T., & Stanne, M. (2000). <i>Cooperative learning methods: A meta-analysis</i>. <a href="https://www.researchgate.net/publication/220040324_Cooperative_learning_methods_A_meta-analysis" target="_blank">Link</a>
+            <br>
+            [2] Kamei, K., & Ashworth, J. (2022). <i>Peer Learning in Teams and Work Performance: Evidence from a Randomized Field Experiment</i>. <a href="https://www.researchgate.net/publication/360383678_Peer_Learning_in_Teams_and_Work_Performance_Evidence_from_a_Randomized_Field_Experiment" target="_blank">Link</a>
+            <br>
+            [3] Oswald, K., & Zhao, X. (2022). <i>Collaborative learning and individual work performance in coworking spaces</i>. <i>Journal of Business Economics and Management, 23</i>(1), 162–179. <a href="https://doi.org/10.3846/jbem.2021.15692" target="_blank">Link</a>
+            <br>
+            [4] Educational Development and Technology Unit. (n.d.). <i>LET Projects – Educational Development and Technology BLOG</i>. <a href="https://blogs.ethz.ch/letblog/category/let-projects/" target="_blank">Link</a>
+            <br>
+            [5] Brandenburger, J., & Janneck, M. (2021). <i>A Teamwork Tool to Support Group Work in Online-based Higher Education: Exploring User Experience and the Use of Support Mechanisms by Students</i>. <a href="https://www.scitepress.org/PublishedPapers/2021/106531/106531.pdf" target="_blank">Link</a>
+            <br>
+            [6] Kim, S., Eun, J., Oh, C., Suh, B., & Lee, J. (2020). <i>Bot in the Bunch: Facilitating Group Chat Discussion by Improving Efficiency and Participation with a Chatbot</i>. <a href="https://doi.org/10.1145/3313831.3376785" target="_blank">Link</a>
+            <br>
+            [7] Kuhail, M. A., Alturki, N., Alramlawi, S., et al. (2023). <i>Interacting with educational chatbots: A systematic review</i>. <i>Education and Information Technologies, 28</i>, 973–1018. <a href="https://doi.org/10.1007/s10639-022-11177-3" target="_blank">Link</a>
+            <br>
+            [8] Adamson, D., Dyke, G., Jang, H., et al. (2014). <i>Towards an Agile Approach to Adapting Dynamic Collaboration Support to Student Needs</i>. <i>International Journal of Artificial Intelligence in Education, 24</i>, 92–124. <a href="https://doi.org/10.1007/s40593-013-0012-6" target="_blank">Link</a>
+            <br>
+            [9] Hmelo-Silver, C. (2002). <i>Collaborative Ways of Knowing: Issues in Facilitation</i>. <a href="https://www.researchgate.net/publication/2496875_Collaborative_Ways_of_Knowing_Issues_in_Facilitation" target="_blank">Link</a>
+            <br>
+            [10] Sjølie, E., Strømme, A., & Boks-Vlemmix, J. (2021). <i>Team-skills training and real-time facilitation as a means for developing student teachers’ learning of collaboration</i>. <i>Teaching and Teacher Education, 107</i>, 103477. <a href="https://doi.org/10.1016/j.tate.2021.103477" target="_blank">Link</a>
+            <br>
+            [11] Anonymous Author(s). (2024). <i>Mental Models of Meeting Goals: Supporting Intentionality in Meeting Technologies</i>. <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/01/chi24a-sub4574-i67.pdf" target="_blank">Link</a>
+            <br>
+            [12] CHI 2025 Program. (2025). <i>Conference Programs</i>. <a href="https://programs.sigchi.org/chi/2025/program/content/188657" target="_blank">Link</a>
+            <br>
+            [13] Strauß, S., & Rummel, N. (2021). <i>Promoting regulation of equal participation in online collaboration by combining a group awareness tool and adaptive prompts. But does it even matter?</i> <i>International Journal of Computer-Supported Collaborative Learning, 16</i>, 67–104. <a href="https://doi.org/10.1007/s11412-021-09340-y" target="_blank">Link</a>
+            <br>
+            [14] Bakir, N., Humpherys, S., & Dana, K. (2020). <i>Students' Perceptions of Challenges and Solutions to Face-to-Face and Online Group Work</i>. <a href="https://eric.ed.gov/?id=EJ1258226" target="_blank">Link</a>
+            <br>
+            [15] Chang, B., & Kang, H. (2016). <i>Challenges Facing Group Work Online</i>. <i>Distance Education, 37</i>(1), 73–88. <a href="https://doi.org/10.1080/01587919.2016.1154781" target="_blank">Link</a>
+            <br>
+            [16] Dai, Y., Xiao, J.-Y., Huang, Y., Zhai, X., Wai, F.-C., & Zhang, M. (2025). <i>How Generative AI Enables an Online Project-Based Learning Platform: An Applied Study of Learning Behavior Analysis in Undergraduate Students</i>. <a href="https://www.mdpi.com/2076-3417/15/5/2369" target="_blank">Link</a>
+            <br>
+            [17] Hao, Z., Jiang, J., Yu, J., Liu, Z., & Zhang, Y. (2025). <i>Student engagement in collaborative learning with AI agents in an LLM-empowered learning environment: A cluster analysis</i>. <a href="https://arxiv.org/html/2503.01694" target="_blank">Link</a>
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End References -->
 
 <!-- Team -->
 <section class="section hero is-light">
@@ -374,13 +512,23 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{angehrn2025teamwise,
+    <!-- <pre><code>@misc{angehrn2025teamwise,
       author       = {Dominique Angehrn and Akhila Obilisetty and Mikkeline Elleby},
       title        = {{TeamWise}: the AI Meeting Facilitator},
       year         = {2025},
       howpublished = {\url{https://github.com/angehrnd/TeamWise}},
       note         = {Design in Educational Technologies, ETH Zurich \& ETH Heilbronn},
-    }</code></pre>
+    }</code></pre> -->
+    <pre><code>@online{angehrn2025teamwise,
+      author       = {Angehrn, Dominique and Obilisetty, Akhila and Elleby, Mikkeline},
+      title        = {TeamWise: The AI Meeting Facilitator},
+      year         = {2025},
+      institution  = {ETH Zurich \& ETH Heilbronn},
+      url          = {https://github.com/angehrnd/TeamWise},
+      urldate      = {2025-05-28},
+      note         = {Design in Educational Technologies},
+    }
+    </code></pre>
   </div>
 </section>
 <!--End BibTex citation -->
